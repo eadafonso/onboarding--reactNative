@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, View, Text, TouchableOpacity, Button  } from 'react-native';
+import { SafeAreaView, View, Text, TouchableOpacity, Image  } from 'react-native';
 
 import Onboarding from 'react-native-onboarding-swiper';
 
@@ -31,17 +31,27 @@ const OnVoard = ({navigation}) => {
         onDone={() => navigation.navigate('Login')}
     pages={[
       {
-        backgroundColor: '#fff', 
-        // image: <Image source={require('./images/circle.png')} />,
-        title: 'Edvaldo',
-        subtitle: 'Done with React Native Onboarding Swiper',
+        backgroundColor: '#aee4d0', 
+        image: <Image 
+            style={{
+                width: 200,
+                height: 180,
+            }}
+            source={require('../assets/search.png')} />,
+        title: 'Encontra o que procuras',
+        subtitle: 'Saiba em primeira mão quem está a procura ou  a venda de um determinado produto.',
       },
 
       {
-        backgroundColor: '#099',
-        // image: <Image source={require('./images/circle.png')} />,
-        title: 'Afonso',
-        subtitle: 'Done with React Native Onboarding Swiper',
+        backgroundColor: '#fded93',
+        image: <Image
+        style={{
+            width: 200,
+            height: 180
+        }}
+        source={require('../assets/pambala.png')} />,
+        title: 'Aproveite os Negócios',
+        subtitle: 'Explore várias oportunidades de negocios que o Kezuké lhe proporciona.',
       },
 
     ]}
